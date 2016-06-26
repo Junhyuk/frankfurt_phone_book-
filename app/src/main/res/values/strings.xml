@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Frankfurt 정보</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_section1">한국 식당</string>
+    <string name="title_section2">일식정보</string>
+    <string name="title_section3">기타 맛집</string>
+
+    <string name="tab1_button">Button in First Tab</string>
+    <string name="tab2_text">HomePage : https://junbenchmarkign.tistory.com</string>
+    <string name="example">Fragement example </string>
+</resources>

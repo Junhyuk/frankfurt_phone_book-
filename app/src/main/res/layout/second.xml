@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:addroid="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    class="com.google.android.gms.maps.MapFragment"
+   >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/LargeText"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:textSize = "30sp"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:autoLink="map"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#0000FF"
+        android:autoLink="phone"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="180dip"
+            android:layout_height="wrap_content"
+            android:text="전화"
+            android:id="@+id/button"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical|bottom" />
+
+        <Button
+            android:layout_width="180dip"
+            android:layout_height="wrap_content"
+            android:text="지도"
+            android:id="@+id/button2"
+            android:layout_gravity="center_vertical|bottom" />
+
+    </LinearLayout>
+
+</LinearLayout>
