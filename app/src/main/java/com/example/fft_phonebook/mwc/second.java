@@ -1,9 +1,15 @@
 package com.example.fft_phonebook.mwc;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.RelativeSizeSpan;
@@ -20,7 +26,11 @@ import android.text.style.UnderlineSpan;
 import android.text.SpannableStringBuilder;
 
 import static com.example.fft_phonebook.mwc.R.id.button;
-
+import java.io.IOException;
+import java.io.File;
+import android.content.pm.PackageManager;
+import android.Manifest;
+import android.widget.Toast;
 
 /**
  * Created by Administrator on 2016-02-11.
@@ -32,7 +42,8 @@ public class second extends Activity  implements View.OnClickListener {
     String g_menu;
     private View arg0;
     private GoogleMap map;
-
+    private final int MY_PERMISSION_REQUEST_CALL= 100;
+    private static final String TAG = "AppPermission";
 
     @Override
     protected void onCreate(Bundle savedInstantanceState){
@@ -101,8 +112,13 @@ public class second extends Activity  implements View.OnClickListener {
         switch (arg0.getId()){
            case R.id.button:
               // startActivity(new Intent("android.intent.action.CALL", Uri.parse(g_phone_num)));
-               Log.i("MWC", "second second"  + g_phone_num);
-               startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" +g_phone_num)));
+               Log.i("MWC", "second second " + g_phone_num);
+               //startActivity(new Intent("android.intent.action.CALL", Uri.parse("tel:" +g_phone_num)));
+
+
+               checkPermission();
+
+
                break;
            case R.id.button2:
                Log.i("MWC", "second second"  + g_addr);
@@ -117,4 +133,70 @@ public class second extends Activity  implements View.OnClickListener {
 
     }
 
+
+
+    @TargetApi(Build.VERSION_CODES.M)
+    private void checkPermission() {
+        Log.i(TAG, "CheckPermission : " + checkSelfPermission(Manifest.permission.CALL_PHONE));
+        if (checkSelfPermission(Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED
+                || checkSelfPermission(Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            // Should we show an explanation?
+            if (shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+                // Explain to the user why we need to write the permission.
+                Toast.makeText(this, "Phone call", Toast.LENGTH_SHORT).show();
+            }
+
+            requestPermissions(new String[]{Manifest.permission.CALL_PHONE, Manifest.permission.CALL_PHONE},
+                    MY_PERMISSION_REQUEST_CALL);
+
+            // MY_PERMISSION_REQUEST_STORAGE is an
+            // app-defined int constant
+
+        } else {
+            Log.e(TAG, "permission deny");
+            call_with_number();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSION_REQUEST_CALL:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED
+                        && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+
+
+                    call_with_number();
+
+                    // permission was granted, yay! do the
+                    // calendar task you need to do.
+
+                } else {
+
+                    Log.d(TAG, "Permission always deny");
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                break;
+        }
+    }
+
+    private void call_with_number() {
+
+        try {
+            Intent i;
+            //i = new Intent(Intent.ACTION_CALL,Uri.parse("tel:" +g_phone_num));
+            i = new Intent(Intent.ACTION_CALL);
+            i.setData(Uri.parse("tel:" + g_phone_num));
+            startActivity(i);
+
+        } catch (ActivityNotFoundException e) {
+            Log.e("전화걸기", "전화걸기에 실패했습니다", e);
+
+        }
+    }
 }

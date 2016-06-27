@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
 
 
     public String[] restaurantArray = {"고궁", "하이델크룩", "바첸하우스", "도모", "서울식당", "송학"};
-    public String[] restaurantPhone = {"+49 061717 79451", "+49 06171 971 600", "+49 06196 23430", "+49 06173 78898", "+49 061717 508 2448 ", "+49 06192 200 0122"};
+    public String[] restaurantPhone = {"+49 61717 79451", "+49 6171 971 600", "+49 6196 23430", "+49 6173 78898", "+49 61717 508 2448 ", "+49 6192 200 0122"};
     public String[] restaurantAddress = {"Bahnstrasse 28, 61449 Steinbach (Taunus)", "Königsteiner Straße 30, 61440 Oberursel (Taunus)",
                                              "Königsteiner Str. 157,65812 Bad Soden am Taunus", "Westerbachstraße 23,61476 Kronberg im Taunus",
                                             "Hohemarkstraße 194, 61440 Oberursel (Taunus)", "Frankfurt str17, 65830 Kriftel" };
