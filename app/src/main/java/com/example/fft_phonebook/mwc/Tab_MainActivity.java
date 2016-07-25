@@ -38,6 +38,8 @@ public class Tab_MainActivity extends FragmentActivity implements
      */
     ViewPager mViewPager;
 
+    public final static int count_of_tab = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +83,7 @@ public class Tab_MainActivity extends FragmentActivity implements
                     .setText(mSectionsPagerAdapter.getPageTitle(i))
                     .setTabListener(this));
         }
+
     }
 
     @Override
@@ -120,11 +123,13 @@ public class Tab_MainActivity extends FragmentActivity implements
             switch(position) {
                 case 0:
                     return new Tab1(mContext);
-
                 case 1:
                     return new Tab2(mContext);
                 case 2:
                     return new Tab3(mContext);
+                case 3:
+                   return new Tab4(mContext);
+
             }
             return null;
         }
@@ -132,7 +137,7 @@ public class Tab_MainActivity extends FragmentActivity implements
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return count_of_tab;
         }
 
         @Override
@@ -145,6 +150,8 @@ public class Tab_MainActivity extends FragmentActivity implements
                     return getString(R.string.title_section2).toUpperCase(l);
                 case 2:
                     return getString(R.string.title_section3).toUpperCase(l);
+                case 3:
+                    return "Frankfurt 매장정보".toUpperCase(l);
             }
             return null;
         }

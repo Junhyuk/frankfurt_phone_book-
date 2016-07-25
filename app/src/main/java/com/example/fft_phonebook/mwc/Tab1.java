@@ -28,7 +28,7 @@ import android.content.Intent;
 public class Tab1 extends Fragment implements AdapterView.OnItemClickListener {
 
 	public String[] RestaurantArray = {"고궁", "하이델크룩", "바첸하우스", "도모", "서울식당", "송학"};
-	public String[] RestaurantPhone = {"+49 061717 79451", "+49 06171 971 600", "+49 06196 23430", "+49 06173 78898", "+49 061717 508 2448 ", "+49 06192 200 0122"};
+	public String[] RestaurantPhone = {"+49 61717 79451", "+49 6171 971 600", "+49 6196 23430", "+49 6173 78898", "+49 61717 508 2448 ", "+49 6192 200 0122"};
 	public String[] RestaurantAddress = {"Bahnstrasse 28, 61449 Steinbach", "Konigsteiner Strasse 30, 61440 Oberursel",
 			"Konigsteiner Str. 157,65812 Bad Soden", "Westerbachstrasse 23,61476 Kronberg",
 			"Hohemarkstrasse 194, 61440 Oberursel", "Frankfurt str17, 65830 Kriftel" };
@@ -48,21 +48,31 @@ public class Tab1 extends Fragment implements AdapterView.OnItemClickListener {
 
 	*/
 	public String[] RestrauntMenu= {"광어회 깐풍기 누룽지 탕수육 콩나물해장국 짜장면이 유명하다", "김치찜 고기가 유명하며 Side 메뉴로 장어나 파전 등도 괜찮다",
-								"회 보쌈/삼겹살 장어 그리고 매운탕/짬뽕탕이 괜찮다",  "김치볶음밥 돼지깐풍기 전복죽 삼겹살 김삼복 등등이 괜찮다",
-								"오버우어젤에 있는 식당으로 탕종류가 맛있다. 곱창전골 삼겹살 김치전 등등 회식장소로 좋음", "전 종류나 김치전골 된장찌개 한여름에는 삼계탕이 괜찮다" };
+								"회 보쌈/삼겹살 장어 문어숙회 그리고 매운탕/짬뽕탕이 괜찮다",  "돼지깐풍기 전복죽 삼겹살 오무라이스 김삼복 등이 주 메뉴이며 주위 KIA 가 있어 예약은 미리 필수!!",
+								"오버우어젤에 있는 식당으로 탕종류가 맛있다. 곱창전골 삼겹살 김치전 등등 회식장소로 좋음", "전 종류나 김치전골 된장찌개 한여름에는 삼계탕이 괜찮다 공항에서 가까워 출장자와함꼐 자주 이용 된다 " };
 
 
 
-	public Context mContext;
+		public Context mContext;
 		public Context iContext;
 
 
 		public Tab1(Context context) {
 			mContext = context;
 		}
+		public Tab1(){
+
+		}
+
 
 		public final static boolean DEBUG_JUN = true;
 
+
+				@Override
+				public void onCreate(Bundle savedInstanceState) {
+					// TODO Auto-generated method stub
+					super.onCreate(savedInstanceState);
+				}
 				@Override
 				public View onCreateView(LayoutInflater inflater,
 						ViewGroup container, Bundle savedInstanceState) {
