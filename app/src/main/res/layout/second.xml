@@ -16,7 +16,7 @@
         android:id="@+id/LargeText"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:textSize = "30sp"
+        android:textSize = "25sp"
          />
 
     <View
@@ -31,12 +31,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Address"
+
         android:id="@+id/textView"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:textSize = "20sp"
         android:autoLink="map"/>
+        <!-- android:text="Address" -->
 
     <View
         android:layout_width="match_parent"
@@ -77,26 +78,37 @@
         android:layout_height="wrap_content"></FrameLayout>
 
 
-    <LinearLayout
+      <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_gravity="bottom">
-
+       <RelativeLayout
+         android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <Button
-            android:layout_width="180dip"
-            android:layout_height="wrap_content"
-            android:text="전화"
             android:id="@+id/button"
-            android:layout_marginLeft="15dp"
-            android:layout_gravity="center_vertical|bottom" />
+            android:layout_width="160dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+
+            android:layout_marginLeft="20dp"
+            android:text="전화" />
 
         <Button
-            android:layout_width="180dip"
-            android:layout_height="wrap_content"
-            android:text="지도"
             android:id="@+id/button2"
-            android:layout_gravity="center_vertical|bottom" />
+            android:layout_width="160dip"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="지도" />
+        </RelativeLayout>
 
     </LinearLayout>
 

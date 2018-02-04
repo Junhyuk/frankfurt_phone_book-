@@ -1,4 +1,4 @@
-package com.example.fft_phonebook.mwc;
+package com.fft_phonebook.bench.jun;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

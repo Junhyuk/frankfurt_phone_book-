@@ -1,4 +1,4 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 
 
@@ -18,6 +18,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.benchmarking.fft_phonebook.jun.R;
 
 public class Tab_MainActivity extends FragmentActivity implements
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fft_phonebook.mwc" >
+    package="com.benchmarking.fft_phonebook.jun" >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.DIAL_PHONE" />
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".StartView"
+            android:name="com.benchmarking.fft_phonebook.jun.StartView"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,19 +23,19 @@
 
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.benchmarking.fft_phonebook.jun.MainActivity"></activity>
 
         <uses-library android:name="com.google.android.maps"/>
 
         <activity
-            android:name="com.example.fft_phonebook.mwc.Tab_MainActivity"
+            android:name="com.benchmarking.fft_phonebook.jun.Tab_MainActivity"
             android:label="@string/app_name" >
         </activity>
 
 
 
         <activity
-            android:name=".second"
+            android:name="com.benchmarking.fft_phonebook.jun.second"
             android:label="@string/app_name"
             android:exported="true">
 
@@ -51,16 +51,16 @@
 
 
         <activity
-            android:name="com.example.fft_phonebook.mwc.Tab1"
+            android:name="com.benchmarking.fft_phonebook.jun.Tab1"
             android:label="@string/title_section1" >
         </activity>
 
         <activity
-            android:name="com.example.fft_phonebook.mwc.Tab2"
+            android:name="com.benchmarking.fft_phonebook.jun.Tab2"
             android:label="@string/title_section2" >
         </activity>
         <activity
-            android:name="com.example.fft_phonebook.mwc.Tab3"
+            android:name="com.benchmarking.fft_phonebook.jun.Tab3"
             android:label="@string/title_section3" >
         </activity>
         <meta-data

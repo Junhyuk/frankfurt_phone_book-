@@ -27,7 +27,7 @@
             android:id="@+id/text02"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="음식점 정리"
+            android:text="사는 정보 이야기"
             android:textSize="25sp"
             android:textColor="#FFFFFFFF"
             android:paddingTop="10dp"

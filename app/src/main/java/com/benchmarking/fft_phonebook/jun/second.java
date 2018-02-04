@@ -1,4 +1,4 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -9,27 +9,22 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
-import android.text.style.AbsoluteSizeSpan;
 import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+//import com.benchmarking.fft_phonebook.jun.R;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import android.content.Intent;
-import android.net.Uri;
+
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.text.SpannableStringBuilder;
 
-import static com.example.fft_phonebook.mwc.R.id.button;
-import java.io.IOException;
-import java.io.File;
-import android.content.pm.PackageManager;
-import android.Manifest;
+//import static com.benchmarking.fft_phonebook.jun.R.id.button;
+
 import android.widget.Toast;
 
 /**
@@ -73,7 +68,8 @@ public class second extends Activity  implements View.OnClickListener {
 
         TextView sc_addr = (TextView) findViewById(R.id.textView);
 
-        addr_text = "Address: " +"\n"+ addr_text;
+        //addr_text ="Address:  " +"\n"+ addr_text;
+       // addr_text = addr_text;
 
         final SpannableStringBuilder sps = new SpannableStringBuilder(addr_text);
         sps.setSpan(new RelativeSizeSpan(1.2f), 0, 8, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -99,7 +95,7 @@ public class second extends Activity  implements View.OnClickListener {
         Log.i("MWC", "second second"  + phone_text);
 
 
-        Button btn1 = (Button) findViewById(button);
+        Button btn1 = (Button) findViewById(R.id.button);
         Button btn2 = (Button) findViewById(R.id.button2);
 
         btn1.setOnClickListener(this);

@@ -1,9 +1,11 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.benchmarking.fft_phonebook.jun.R;
 
 /**
  * Created by Administrator on 2016-02-17.

@@ -1,7 +1,7 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 
-import com.example.fft_phonebook.mwc.R;
+import com.benchmarking.fft_phonebook.jun.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,36 +19,21 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.content.Intent;
-
 
 
 @SuppressLint("ValidFragment")
 public class Tab1 extends Fragment implements AdapterView.OnItemClickListener {
 
-	public String[] RestaurantArray = {"고궁", "하이델크룩", "바첸하우스", "도모", "서울식당", "송학"};
-	public String[] RestaurantPhone = {"+49 61717 79451", "+49 6171 971 600", "+49 6196 23430", "+49 6173 78898", "+49 61717 508 2448 ", "+49 6192 200 0122"};
+	public String[] RestaurantArray = {"고궁", "하이델크룩", "바첸하우스", "도모", "서울식당", "가야"};
+	public String[] RestaurantPhone = {"+49 61717 79451", "+49 6171 971 600", "+49 6196 23430", "+49 6173 78898", "+49 61717 508 2448 ", "+49 6196 9214 431"};
 	public String[] RestaurantAddress = {"Bahnstrasse 28, 61449 Steinbach", "Konigsteiner Strasse 30, 61440 Oberursel",
 			"Konigsteiner Str. 157,65812 Bad Soden", "Westerbachstrasse 23,61476 Kronberg",
-			"Hohemarkstrasse 194, 61440 Oberursel", "Frankfurt str17, 65830 Kriftel" };
+			"Hohemarkstrasse 194, 61440 Oberursel", "Odenwald Strass 5, 65812 Bad Soden" };
 
-
-
-	/*
-	public String[][] MainMenu= {
-									{"음식1", "음식2"},
-									{"음식3", "음식4"},
-									{"음식3", "음식4"},
-									{"음식3", "음식4"},
-									{"음식3", "음식4"},
-									{"음식3", "음식4"},
-
-									};
-
-	*/
-	public String[] RestrauntMenu= {"광어회 깐풍기 누룽지 탕수육 콩나물해장국 짜장면이 유명하다", "김치찜 고기가 유명하며 Side 메뉴로 장어나 파전 등도 괜찮다",
-								"회 보쌈/삼겹살 장어 문어숙회 그리고 매운탕/짬뽕탕이 괜찮다",  "돼지깐풍기 전복죽 삼겹살 오무라이스 김삼복 등이 주 메뉴이며 주위 KIA 가 있어 예약은 미리 필수!!",
-								"오버우어젤에 있는 식당으로 탕종류가 맛있다. 곱창전골 삼겹살 김치전 등등 회식장소로 좋음", "전 종류나 김치전골 된장찌개 한여름에는 삼계탕이 괜찮다 공항에서 가까워 출장자와함꼐 자주 이용 된다 " };
+	public String[] RestrauntMenu= {"메뉴: 광어회 깐풍기 누룽지 탕수육 콩나물해장국 짜장면", "메뉴: 김치찜 장어 파전",
+								"메뉴: 회 보쌈/삼겹살 장어 문어숙회 매운탕/짬뽕탕",  "메뉴: 돼지깐풍기 전복죽 삼겹살 오무라이스 김삼복",
+								"메뉴: 탕종류, Sub Menu:곱창전골 삼겹살 김치전",
+                                "메뉴: 굴보쌈 감자탕 " };
 
 
 

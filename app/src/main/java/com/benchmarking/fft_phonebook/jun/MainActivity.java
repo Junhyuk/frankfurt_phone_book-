@@ -1,4 +1,4 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,13 +6,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import android.util.Log;
 import android.content.Intent;
+
+import com.benchmarking.fft_phonebook.jun.R;
 
 import static android.widget.AdapterView.*;
 

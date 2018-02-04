@@ -1,22 +1,16 @@
-package com.example.fft_phonebook.mwc;
+package com.benchmarking.fft_phonebook.jun;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTabHost;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import java.util.Locale;
+
+import com.benchmarking.fft_phonebook.jun.R;
 
 @SuppressLint("ValidFragment")
 public class Tab4 extends Fragment {
@@ -33,21 +27,21 @@ public class Tab4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-      //  View view = inflater.inflate(R.layout.activity_tab4, null);
+        //View view = inflater.inflate(R.layout.activity_tab4, null);
         //return view;
 
         mTabHost = new FragmentTabHost(getActivity());
 
         Bundle b = new Bundle();
-        b.putString("key", "Simple");
+        b.putString("key", "Tab4");
 
 
         mTabHost.setup(getActivity(), getChildFragmentManager(), R.id.textViewtab4);
 
-        mTabHost.addTab(mTabHost.newTabSpec("simple").setIndicator("Simple"),
-                Tab1.class, b);
-        mTabHost.addTab(mTabHost.newTabSpec("array").setIndicator("Array"),
-                Tab2.class, b);
+        mTabHost.addTab(mTabHost.newTabSpec("Shoping").setIndicator("Shoping"),
+                shoping.class, b);
+        mTabHost.addTab(mTabHost.newTabSpec("Sport").setIndicator("Sport"),
+                sport.class, b);
 
         return mTabHost;
     }
